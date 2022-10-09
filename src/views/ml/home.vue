@@ -1,15 +1,13 @@
 <template>
     <div>
-        Hello Home!
+        <AppHeader />
     </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-@Component
-export default class Home extends Vue {
-    
-}
+import AppHeader from "../../components/app-header.vue";
+
 </script>
 
 <style lang="scss" scoped>

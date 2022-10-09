@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2>ConvNeXt-微小瑕疵检测测试页面</h2>
+        <h2>Yolov5</h2>
         <p>输入图片</p>
         <a-upload name="image" list-type="picture-card" :show-upload-list="false" action="/api/upload"
             :before-upload="beforeUpload" @change="handleChange">
@@ -12,9 +12,6 @@
         </a-upload>
         <p>Hub Reply:</p>
         <p>{{model_resp.result}}</p>
-        <a-icon class="icon-big" :class="test_success?'ok':'broken'" v-if="test_done" :type="test_success?'check-circle':'warning'"></a-icon>
-        <a-icon class="icon-big" v-if="has_submitted&&!test_done" type="loading"></a-icon>
-        <p v-if="test_done">{{test_success?'测试通过':'测试失败'}}</p>
     </div>
 </template>
 
@@ -28,14 +25,14 @@ function getBase64(img: Blob, callback: (arg0: string | ArrayBuffer | null) => a
 }
 
 @Component
-export default class ConvNeXt_DD extends Vue {
+export default class Yolov5 extends Vue {
     loading = false;
     test_done = false;
     test_success = false;
     has_submitted = false;
     imageUrl = '';
     imageName = '';
-    modelName = 'ConvNeXt_tiny';
+    modelName = 'Yolov5';
     model_resp = reactive({
         result: {}
     })

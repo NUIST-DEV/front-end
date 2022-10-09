@@ -2,15 +2,15 @@
     <a-layout id="app">
         <a-layout-header class="header">
             <div class="logo" />
-            <a-menu theme="dark" mode="horizontal" :default-selected-keys="['2']" :style="{ lineHeight: '64px' }">
+            <a-menu theme="dark" mode="horizontal" :default-selected-keys="['1']" :style="{ lineHeight: '64px' }">
                 <a-menu-item key="1">
-                    nav 1
+                    实例管理
                 </a-menu-item>
                 <a-menu-item key="2">
-                    nav 2
+                    统计信息
                 </a-menu-item>
                 <a-menu-item key="3">
-                    nav 3
+                    系统管理
                 </a-menu-item>
             </a-menu>
         </a-layout-header>
@@ -20,62 +20,37 @@
                     :style="{ height: '100%', borderRight: 0 }">
                     <a-sub-menu key="sub1">
                         <span slot="title">
-                            <a-icon type="user" />subnav 1
+                            <a-icon type="folder" />分类模型
                         </span>
                         <a-menu-item key="1">
-                            <router-link to="/">/</router-link> 
+                            <router-link to="/">工件划痕检测</router-link> 
                         </a-menu-item>
                         <a-menu-item key="2">
-                            <router-link to="/home">/home</router-link>
+                            <router-link to="/home">布料瑕疵分类</router-link>
                         </a-menu-item>
-                        <a-menu-item key="3">
-                            <router-link to="/index">/index</router-link>
-                        </a-menu-item>
-                        <a-menu-item key="4">
-                            option4
-                        </a-menu-item>
+                        
                     </a-sub-menu>
                     <a-sub-menu key="sub2">
                         <span slot="title">
-                            <a-icon type="laptop" />subnav 2
+                            <a-icon type="laptop" />物体识别模型
                         </span>
                         <a-menu-item key="5">
-                            option5
+                            <router-link to="/yolov5">通用物体识别</router-link>
                         </a-menu-item>
                         <a-menu-item key="6">
-                            option6
+                            标签识别
                         </a-menu-item>
                         <a-menu-item key="7">
-                            option7
-                        </a-menu-item>
-                        <a-menu-item key="8">
-                            option8
-                        </a-menu-item>
-                    </a-sub-menu>
-                    <a-sub-menu key="sub3">
-                        <span slot="title">
-                            <a-icon type="notification" />subnav 3
-                        </span>
-                        <a-menu-item key="9">
-                            option9
-                        </a-menu-item>
-                        <a-menu-item key="10">
-                            option10
-                        </a-menu-item>
-                        <a-menu-item key="11">
-                            option11
-                        </a-menu-item>
-                        <a-menu-item key="12">
-                            option12
+                            电路故障点检测
                         </a-menu-item>
                     </a-sub-menu>
                 </a-menu>
             </a-layout-sider>
             <a-layout style="padding: 0 24px 24px">
                 <a-breadcrumb style="margin: 16px 0">
-                    <a-breadcrumb-item>Home</a-breadcrumb-item>
-                    <a-breadcrumb-item>List</a-breadcrumb-item>
-                    <a-breadcrumb-item>App</a-breadcrumb-item>
+                    <a-breadcrumb-item>主页</a-breadcrumb-item>
+                    <a-breadcrumb-item>模型列表</a-breadcrumb-item>
+                    <a-breadcrumb-item>工件瑕疵检测</a-breadcrumb-item>
                 </a-breadcrumb>
                 <a-layout-content :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }">
                     <router-view></router-view>
